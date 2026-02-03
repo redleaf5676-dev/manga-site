@@ -25,11 +25,10 @@
 
     h2 {
       font-size:28px;
-      margin-bottom:10px;
     }
 
     button {
-      padding:22px 34px;
+      padding:22px;
       font-size:22px;
       border:none;
       border-radius:14px;
@@ -37,27 +36,13 @@
       color:white;
       cursor:pointer;
       width:100%;
-      margin-top:18px;
-      font-weight:600;
-    }
-
-    button:hover {
-      background:#3c7bff;
+      margin-top:20px;
     }
 
     .hint {
       margin-top:24px;
       font-size:16px;
       color:#9aa4b2;
-      line-height:1.5;
-    }
-
-    code {
-      background:#0b0d12;
-      padding:5px 8px;
-      border-radius:8px;
-      color:#cfd6e6;
-      font-size:16px;
     }
   </style>
 </head>
@@ -67,22 +52,18 @@
 <div class="box">
   <h2>Welcome</h2>
 
-  <button onclick="guestLogin()">Login as Guest</button>
+  <button onclick="goLogin()">Login as Guest</button>
 
   <div class="hint">
-    If it doesn’t work, use username <code>guest</code><br>
-    and password <code>1234</code>
+    Username: <b>guest</b><br>
+    Password: <b>Guest123</b>
   </div>
 </div>
 
-<form id="f" method="POST" action="http://mc.terohost.in:26351/login" style="display:none;">
-  <input name="Email" value="guest@gmail.com">
-  <input name="Password" value="1234">
-</form>
-
 <script>
-function guestLogin() {
-  document.getElementById("f").submit();
+function goLogin() {
+  window.location =
+    "http://mc.terohost.in:26351/login";
 }
 </script>
 
